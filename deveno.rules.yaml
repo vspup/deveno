@@ -1,0 +1,257 @@
+# deveno.rules.yaml — the authoritative register of Deveno rules.
+#
+# DVN-R0 applied to the standard itself: a rule is DEFINED here and only
+# here. Deveno.md is prose — it explains and motivates rules by id; it
+# never redefines a normative_text.
+#
+# A rule prescribes behavior; a fact describes the world. Project facts
+# live in *.facts.yaml inside Hubs. This register is a different entity
+# with a different home and a different name.
+#
+# Status of a rule is COMPUTED, never stored or declared:
+#
+#   distinct `project` values in evidence, each with a described pain:
+#     0  -> hypothesis   (may be recorded; must state its basis)
+#     1  -> candidate
+#     2+ -> core
+#
+# `project` is the identity key for counting; `phase` is information
+# about the episode, never identity — two phases of one project are one
+# confirmation. Self-application of the standard to this repository is
+# NOT evidence: it is a consistency stress-test. Its findings go to the
+# session log, to `questions`, or to `conflicts` — never to `evidence`.
+#
+# Rule ids are status-neutral: DVN-R* names the entity kind (rule),
+# never its status. Status lives only as a computation result.
+#
+# UNKNOWN and CONFLICT have separate homes (DVN-R1):
+#   questions:  — the value/answer is not known
+#   conflicts:  — incompatible definitions exist; each entry records
+#                 subject, every location, every value, resolution.
+#                 Resolved conflicts stay recorded with their resolution.
+#
+# Language: this file is a long-term machine-layer contract — English
+# from the first line, always (DVN-R8).
+
+standard: deveno
+
+# applies_to values are the repository profiles that exist today. A new
+# profile is added only together with the first real repository of that
+# kind — profiles are not reserved in advance.
+#   hub                  — a project Engineering Hub
+#   standard-repository  — this repository
+
+rules:
+  - id: DVN-R0
+    title: one-entity-one-home
+    normative_text: >-
+      Every engineering entity has exactly one owning home. Machine-readable
+      facts are defined only in *.facts.yaml; prose may reference, explain,
+      or quote a fact — never redefine it. One document role — one file.
+      One piece of knowledge — one place of storage.
+    corollary: >-
+      Boundary rule: when two knowledge categories overlap, do not create
+      a third category; assign an owner to the overlap and record the
+      boundary explicitly.
+    exceptions:
+      - needs-home: >-
+          A fact whose home does not exist yet lives temporarily in open
+          questions, tagged needs-home.
+    applies_to: [hub, standard-repository]
+    evidence:
+      - project: mps2
+        phase: recovery
+        pain: >-
+          Same engineering facts (CAN IDs, periods) redefined across
+          repositories; a real conflict surfaced only through the
+          duplicate registry.
+        observed_on: 2026-06-20
+
+  - id: DVN-R1
+    title: unknown-is-not-conflict
+    normative_text: >-
+      UNKNOWN (the value is not known: record the question and stop) and
+      CONFLICT (the same fact defined in two or more places with different
+      values) are distinct states with distinct homes. A CONFLICT is never
+      resolved silently: record the subject, every location
+      (repo/file:line), every value, and surface it to the engineer.
+      Detection may be done by AI; resolution is always a human
+      engineering decision. UNKNOWN requires research; CONFLICT requires
+      an engineering decision.
+    applies_to: [hub, standard-repository]
+    evidence:
+      - project: mps2
+        phase: recovery
+        pain: >-
+          A value coincidence across different namespaces was almost
+          misclassified as a conflict; a real conflict (heartbeat period)
+          required an explicit documented engineering decision.
+        observed_on: 2026-06-20
+
+  - id: DVN-R2
+    title: working-order-and-lazy-structure
+    normative_text: >-
+      Understand -> Document -> Extract facts -> Automate. The order never
+      changes. Structure materializes lazily: a folder, a file, or a tool
+      is created only when its first real content exists. Reserved
+      structure lives as a written convention, not as empty directories.
+      The test for any new element: what engineering problem does it
+      solve?
+    applies_to: [hub, standard-repository]
+    evidence:
+      - project: mps2
+        phase: recovery
+        pain: >-
+          Premature structure (empty folders, declarative status fields,
+          extra entry points) was repeatedly created and rolled back.
+        observed_on: 2026-06-20
+
+  - id: DVN-R3
+    title: three-entry-points
+    normative_text: >-
+      A Hub has exactly three entry points: README.md — outside visitor;
+      CLAUDE.md — AI assistant; <project>-vault/00-home — engineer. There
+      are no other entry points.
+    applies_to: [hub]
+    evidence:
+      - project: mps2
+        phase: recovery
+        pain: >-
+          Multiple "start here" documents accumulated and contradicted
+          each other before the rule existed.
+        observed_on: 2026-06-20
+
+  - id: DVN-R4
+    title: evidence-over-assertion
+    normative_text: >-
+      Conclusions rest on source code, build files, schematics,
+      measurements, test reports, repository history. Every recorded fact
+      carries a lifecycle status (claimed | observed | verified |
+      conflicted | unknown). Trust is derived from provenance
+      (verified_by: commit, report/test, hw_rev, dut, date) — never
+      declared. Never present unconfirmed facts as true; do not fill gaps
+      with guesses — mark them UNKNOWN.
+    applies_to: [hub, standard-repository]
+    evidence:
+      - project: mps2
+        phase: recovery
+        pain: >-
+          Status labels without evidence turned out to be noise; only
+          provenance blocks made facts auditable.
+        observed_on: 2026-06-20
+
+  - id: DVN-R5
+    title: bottom-up-evolution
+    normative_text: >-
+      The standard grows bottom-up only: Practice -> Pain -> Observation ->
+      Local rule -> Confirmed on another project -> Standard. Rewording or
+      clarifying an existing rule is allowed at any time. A hypothesis may
+      be recorded without pain, but must state its basis and remain
+      unconfirmed. A rule may not be promoted without documented pain from
+      each confirming project; promotion to core requires a second
+      independent project. Self-application of the standard to its own
+      repository is a consistency check, not evidence.
+    applies_to: [hub, standard-repository]
+    evidence:
+      - project: mps2
+        phase: recovery
+        pain: >-
+          Top-down designed sections (premature versioning, reserved
+          folders) did not survive contact with real work.
+        observed_on: 2026-06-20
+
+  - id: DVN-R6
+    title: session-continuity
+    normative_text: >-
+      AI has no memory between sessions; humans forget agreements. Every
+      work session appends 3-5 lines to 00-session-log.md: what was done,
+      what was found (UNKNOWN / CONFLICT), what was deferred. The next
+      session starts from the log, not from zero.
+    applies_to: [hub, standard-repository]
+    evidence:
+      - project: mps2
+        phase: recovery
+        pain: >-
+          Agent sessions repeated already-done analysis and re-asked
+          settled questions until the log became mandatory.
+        observed_on: 2026-06-20
+
+  - id: DVN-R7
+    title: responsibility-as-entity
+    normative_text: >-
+      "Responsibility" is a fourth entity kind with its own home,
+      alongside facts, document roles, and knowledge.
+    applies_to: [hub]
+    evidence: []
+    basis: >-
+      Recorded as a hypothesis per DVN-R5: the recurring need to answer
+      "who owns this overlap" suggests responsibility may deserve a home,
+      but no concrete pain has required it yet.
+
+  - id: DVN-R8
+    title: language-per-layer
+    normative_text: >-
+      During recovery, language is a property of the layer, not of the
+      whole store. Chat — the engineer's language. Vault prose — the
+      engineer's language, tagged lang in frontmatter as visible
+      translation debt. Machine layers (*.facts.yaml, this register) —
+      English from the start, always. Promotion to English happens per
+      topic as it stabilizes, not as one final pass.
+    applies_to: [hub, standard-repository]
+    evidence:
+      - project: mps2
+        phase: recovery
+        pain: >-
+          Writing recovery prose in English slowed analysis of a large
+          unfamiliar codebase; machine facts still had to stay
+          language-neutral. During a review round the rule was violated
+          unnoticed (Russian text proposed for the machine layer) — an
+          argument for linter enforcement.
+        observed_on: 2026-07-02
+
+# Open questions of the standard itself (UNKNOWN, per DVN-R1):
+
+questions:
+  - id: DVN-Q1
+    text: >-
+      Which rules apply to which repository profiles? This repository is
+      not a Hub (no workspace/, no interfaces); three-entry-points does
+      not apply here. The applies_to field is the current local answer;
+      whether the profile split generalizes is unconfirmed.
+    status: unknown
+
+  - id: DVN-Q2
+    text: >-
+      Can a decision format like .dbc be an authoritative source alongside
+      *.facts.yaml without violating DVN-R0, and how is the boundary
+      owner recorded? Raised by the MPS2 CAN pilot: DBC cannot express
+      runtime scale-byte adjustments.
+    status: unknown
+
+  - id: DVN-Q3
+    text: >-
+      Where is the boundary between a permitted navigational label (e.g.
+      a version string in a document title) and a forbidden duplication
+      of a fact under DVN-R0? Current local answer: the home of the
+      version is the Git tag; prose titles carry no version. Unconfirmed
+      beyond this repository.
+    status: unknown
+
+# Conflicts of the standard itself (DVN-R1). Resolved conflicts stay
+# recorded: the resolution is part of the trace.
+
+conflicts:
+  - id: DVN-C1
+    subject: rule-status-declaration
+    locations:
+      - artifact: EHS Draft 0.3-1, section markers
+        value: "[Core] = proven by practice, copied unchanged"
+      - artifact: EHS Draft 0.3-1, status of this document
+        value: "nothing is final until confirmed on a second project"
+    resolution:
+      status: resolved
+      decision: >-
+        Declared status labels removed from prose entirely; rule status
+        is computed only from independent evidence projects. Prose
+        carries no status anywhere.
+      resolved_on: 2026-07-02
