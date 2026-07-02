@@ -124,3 +124,5 @@ Project decisions are recorded here until a decisions home is earned.
   committed.
 - Deferred: tag v0.4; first real adoption pass on MPS2, then revision
   of adopt-hub.md.
+- Update: v0.4 tagged (annotated, on 3025bf6). Remaining deferred: the
+  MPS2 adoption pass and the adopt-hub.md revision after it.
