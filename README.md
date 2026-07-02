@@ -27,5 +27,8 @@ verification provenance, Git history, recorded conflicts.
   layout. It explains rules by id and never redefines them.
 - `00-session-log.md` — append-only log of work sessions and project
   decisions.
+- `tools/` — shared artifacts for projects joining the standard:
+  `init-hub.sh` (bootstrap a new Hub), `adopt-hub.md` (adopt Deveno in
+  an existing Hub).
 - Version history lives in Git history and tags. Old drafts are not
   kept as files.
