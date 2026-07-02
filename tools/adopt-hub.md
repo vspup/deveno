@@ -23,6 +23,12 @@ git add .gitmodules deveno
 git commit -m "Adopt Deveno <tag> as the referenced standard"
 ```
 
+The `checkout <tag>` step prints a "detached HEAD" notice — this is
+expected, not an error: a submodule pins a commit, not a branch, and
+detached HEAD at the tag is exactly the desired state. Verify with
+`git submodule status` — it should show the pinned commit with the tag
+in parentheses.
+
 ## 2. Audit for a second canon (DVN-R0)
 
 The main risk of adoption: existing documents already *retell* the
