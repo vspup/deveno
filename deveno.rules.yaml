@@ -236,6 +236,26 @@ questions:
       version is the Git tag; prose titles carry no version. Unconfirmed
       beyond this repository.
     status: unknown
+    
+  - id: DVN-Q4
+    text: >-
+      How should the normative Core be distributed across hubs:
+      git submodule, verbatim copy, or generation via init-hub.sh?
+      Raised prematurely by the volo-knowledge-base migration and
+      deliberately deferred; wakes when a third hub exists and
+      copy-drift produces real pain. Submodule was rejected for now:
+      it would freeze a draft into a dependency and distribute a
+      standard whose normative status is not yet computed.
+    status: unknown
+    
+  - id: DVN-Q5
+    text: >-
+      Does a non-engineering project (e.g. a personal knowledge base)
+      count as a distinct confirming project for rule promotion, or
+      does Core stay engineering-scoped with such projects forming a
+      separate evidence branch? Raised by volo-knowledge-base joining
+      the portfolio as the first non-embedded, non-git candidate.
+    status: unknown
 
 # Conflicts of the standard itself (DVN-R1). Resolved conflicts stay
 # recorded: the resolution is part of the trace.

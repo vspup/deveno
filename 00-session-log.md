@@ -126,3 +126,22 @@ Project decisions are recorded here until a decisions home is earned.
   of adopt-hub.md.
 - Update: v0.4 tagged (annotated, on 3025bf6). Remaining deferred: the
   MPS2 adoption pass and the adopt-hub.md revision after it.
+
+## 2026-07-03 — Second project candidate: volo-knowledge-base
+- Done: volo-knowledge-base connected to the portfolio (Codex-to-Claude
+  migration, CLAUDE.md contract, session log + spoke.md, renders on the
+  Helm dashboard). Registered as a *candidate* second project — not a
+  confirming one.
+- Found (observation): independent convergence with DVN-R0 — the vault's
+  pre-existing conventions (L0/L1 layers, source_of_truth, derived_from)
+  predate any contact with Deveno. Consistency signal, NOT evidence: no
+  lived pain under the rules yet. First likely evidence case queued:
+  the level/layer duplicate frontmatter key.
+- Found (observation): status vocabulary is domain-variant (confirmed /
+  needs evidence / unresolved vs claimed / observed / verified). The
+  invariant is the fact lifecycle and provenance-derived trust, not the
+  value names. One project, one observation — stays in the log until a
+  second domain confirms.
+- Found (UNKNOWN -> Q4, Q5): Core distribution mechanism between hubs
+  (submodule rejected for now — would freeze a draft into a dependency);
+  whether a non-engineering project counts toward rule promotion.
