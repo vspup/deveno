@@ -145,3 +145,19 @@ Project decisions are recorded here until a decisions home is earned.
 - Found (UNKNOWN -> Q4, Q5): Core distribution mechanism between hubs
   (submodule rejected for now — would freeze a draft into a dependency);
   whether a non-engineering project counts toward rule promotion.
+
+## 2026-07-08 — MPS2 adoption pass applied: real evidence replaces placeholders
+- Done: applied the transfer package from mps2-hub (output/
+  deveno-registry-update-2026-07-02.md): evidence of DVN-R0..R6 replaced
+  with pains traceable to mps2-hub artifacts; DVN-Q2 removed (placeholder
+  premise, id not reused); incident recorded as resolved DVN-C2.
+- Found (id collision in transfer): the package proposed its two new
+  questions as Q4/Q5, but those ids were taken by the 2026-07-03
+  volo-knowledge-base session; applied as DVN-Q6 (evidence-resolution vs
+  decision-resolution) and DVN-Q7 (homeless-answers buffer), cross-ref in
+  DVN-R1 evidence adjusted. Ids are assigned at application time, not in
+  transfer artifacts — candidate note for adopt-hub.md.
+- Deferred: tag v0.5 and re-pin the mps2-hub submodule; adopt-hub.md
+  revision after this first real pass; prose-level feedback items
+  (mixed-status notes, canonical-name exception, linter hints) for
+  Deveno.md.

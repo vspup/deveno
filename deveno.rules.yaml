@@ -62,10 +62,13 @@ rules:
       - project: mps2
         phase: recovery
         pain: >-
-          Same engineering facts (CAN IDs, periods) redefined across
-          repositories; a real conflict surfaced only through the
-          duplicate registry.
-        observed_on: 2026-06-20
+          The RT data-point registry was defined in three places (code
+          header + datapoint.md + xlsx): 120 IDs in code vs 105
+          documented, 15 undocumented plus a macro typo — the drift
+          surfaced only through a generated reconciliation. The
+          power-module wire protocol existed as two hand-synced vendored
+          copies. Recorded in mps2-hub 00-duplicates.md.
+        observed_on: 2026-07-01
 
   - id: DVN-R1
     title: unknown-is-not-conflict
@@ -83,10 +86,14 @@ rules:
       - project: mps2
         phase: recovery
         pain: >-
-          A value coincidence across different namespaces was almost
-          misclassified as a conflict; a real conflict (heartbeat period)
-          required an explicit documented engineering decision.
-        observed_on: 2026-06-20
+          Two genuine doc-vs-code value conflicts (output power limit
+          4000 W vs 6000 W; dissipation -800 W vs -1600 W) were recorded
+          and left OPEN for an engineering decision, while a suspected
+          conflict (seemingly diverged vendored protocol copies)
+          dissolved once more evidence was gathered — the two kinds
+          needed different handling. Recorded in mps2-hub
+          00-duplicates.md; see also DVN-Q6.
+        observed_on: 2026-07-01
 
   - id: DVN-R2
     title: working-order-and-lazy-structure
@@ -102,9 +109,13 @@ rules:
       - project: mps2
         phase: recovery
         pain: >-
-          Premature structure (empty folders, declarative status fields,
-          extra entry points) was repeatedly created and rolled back.
-        observed_on: 2026-06-20
+          The hub README referenced tools/ and ai/ directories that never
+          had content; a day-one ai/ scaffold folder held only a stub
+          README and was deleted untouched. Meanwhile 40-decisions
+          correctly stayed unmaterialized through seven recovery
+          sessions, and scripts/ earned itself on day one with two real
+          analysis scripts.
+        observed_on: 2026-07-02
 
   - id: DVN-R3
     title: three-entry-points
@@ -117,9 +128,11 @@ rules:
       - project: mps2
         phase: recovery
         pain: >-
-          Multiple "start here" documents accumulated and contradicted
-          each other before the rule existed.
-        observed_on: 2026-06-20
+          A fourth quasi-entry-point (CLAUDE.ru.md, a maintained
+          translation of the AI entry) went stale the same day it was
+          created and was later deleted; the visitor entry (README)
+          additionally referenced nonexistent directories until repaired.
+        observed_on: 2026-07-01
 
   - id: DVN-R4
     title: evidence-over-assertion
@@ -136,9 +149,12 @@ rules:
       - project: mps2
         phase: recovery
         pain: >-
-          Status labels without evidence turned out to be noise; only
-          provenance blocks made facts auditable.
-        observed_on: 2026-06-20
+          The owner's system diagram carried two wrong repository URLs,
+          caught only because diagram facts were held at "claimed" until
+          code-verified; documented power limits contradicted the code
+          clamps; a hardcoded loop-rate constant (CTRL_FREQ) was recorded
+          as UNKNOWN with a source line instead of trusted.
+        observed_on: 2026-07-01
 
   - id: DVN-R5
     title: bottom-up-evolution
@@ -156,9 +172,13 @@ rules:
       - project: mps2
         phase: recovery
         pain: >-
-          Top-down designed sections (premature versioning, reserved
-          folders) did not survive contact with real work.
-        observed_on: 2026-06-20
+          The draft's flat-table duplicate registry could not carry a
+          real conflict lifecycle (suspected -> resolved-by-evidence ->
+          residual debt); practice forced per-fact sections with mutable
+          status, fed back and acknowledged the same day. One feedback
+          item was itself a misreading (scripts/ removal), corrected by
+          the author — the loop works in both directions.
+        observed_on: 2026-07-01
 
   - id: DVN-R6
     title: session-continuity
@@ -172,9 +192,11 @@ rules:
       - project: mps2
         phase: recovery
         pain: >-
-          Agent sessions repeated already-done analysis and re-asked
-          settled questions until the log became mandatory.
-        observed_on: 2026-06-20
+          Before the log existed, session continuity ran on an ad-hoc
+          "paste the last assistant message before /clear" habit, which
+          caused one real context loss; backfilling five sessions into
+          the log took minutes and immediately replaced the habit.
+        observed_on: 2026-07-01
 
   - id: DVN-R7
     title: responsibility-as-entity
@@ -220,13 +242,9 @@ questions:
       whether the profile split generalizes is unconfirmed.
     status: unknown
 
-  - id: DVN-Q2
-    text: >-
-      Can a decision format like .dbc be an authoritative source alongside
-      *.facts.yaml without violating DVN-R0, and how is the boundary
-      owner recorded? Raised by the MPS2 CAN pilot: DBC cannot express
-      runtime scale-byte adjustments.
-    status: unknown
+  # DVN-Q2 removed 2026-07-08: its premise ("Raised by the MPS2 CAN
+  # pilot") was placeholder evidence — no CAN pilot happened (see
+  # DVN-C2). The id is not reused.
 
   - id: DVN-Q3
     text: >-
@@ -257,6 +275,29 @@ questions:
       the portfolio as the first non-embedded, non-git candidate.
     status: unknown
 
+  - id: DVN-Q6
+    text: >-
+      DVN-R1 states resolution is always a human engineering decision.
+      MPS2 practice found a second kind: a SUSPECTED conflict born of
+      incomplete evidence (vendored protocol copies looked diverged) was
+      legitimately closed by AI gathering more evidence (cloning the
+      second repository and diffing) — no engineering decision involved,
+      and nothing was resolved silently (recorded first, resolved
+      second). Should R1 distinguish evidence-resolution from
+      decision-resolution?
+    status: unknown
+
+  - id: DVN-Q7
+    text: >-
+      A third operational buffer emerged besides the session log
+      (chronology) and open questions (questions): homeless ANSWERS —
+      confirmed observations with no home yet (branch states, diagram
+      anomalies with their resolutions, firmware authorship). MPS2 keeps
+      them in hub-notes.md; items move out as homes materialize. Does
+      this deserve the standard, or is it a project idiom? Needs a
+      second project growing the same organ.
+    status: unknown
+
 # Conflicts of the standard itself (DVN-R1). Resolved conflicts stay
 # recorded: the resolution is part of the trace.
 
@@ -274,4 +315,26 @@ conflicts:
         Declared status labels removed from prose entirely; rule status
         is computed only from independent evidence projects. Prose
         carries no status anywhere.
+      resolved_on: 2026-07-02
+
+  - id: DVN-C2
+    subject: mps2-evidence-provenance
+    locations:
+      - artifact: deveno.rules.yaml v0.4, evidence of DVN-R0..R6 + DVN-Q2
+        value: >-
+          mps2 pains dated 2026-06-20 (CAN IDs, heartbeat period,
+          CAN pilot / DBC)
+      - artifact: mps2-hub history (00-session-log.md, 00-duplicates.md)
+        value: >-
+          hub started 2026-07-01; recorded pains are power limits,
+          registry drift, protocol copies; no CAN work exists
+    resolution:
+      status: resolved
+      decision: >-
+        Owner confirmed 2026-07-02 the entries were illustrative
+        placeholders, not observations. Replaced with real evidence
+        traceable to mps2-hub artifacts; DVN-Q2 removed with them.
+        Placeholder evidence is itself a DVN-R4 violation — an argument
+        for a linter check: every evidence entry must point to a
+        recorded artifact.
       resolved_on: 2026-07-02
