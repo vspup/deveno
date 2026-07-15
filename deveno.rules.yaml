@@ -336,6 +336,10 @@ questions:
       automation. Explicit non-triggers: merely encountering the first
       invariant, preference for clearer classification, anticipated
       convenience. The existing fact form is tried first.
+    status: unknown
+
+  - id: DVN-Q10
+    text: >-
       DVN-R6 fixes the session-log filename as 00-session-log.md. In a
       navigational vault the 00- prefix reads as entry/index (00-home),
       so operational 00- files (session-log, conflicts, duplicates)
@@ -343,7 +347,10 @@ questions:
       _meta/session-log.md to keep 00- entry-only. Should R6 own the
       location, or is placement a project convention (vault -> _meta/,
       plain docs/ -> 00-, tiny repo -> root) with R6 owning only the
-      "append every session" obligation? Raised by lab-host 2026-07-14.
+      "append every session" obligation? Raised by lab-host 2026-07-14
+      as its DVN-Q8; that id was taken by a parallel branch, and the
+      PR #2 merge fused this text into DVN-Q9 — split out and assigned
+      DVN-Q10 on 2026-07-15.
     status: unknown
 
 # Conflicts of the standard itself (DVN-R1). Resolved conflicts stay

@@ -193,6 +193,7 @@ Project decisions are recorded here until a decisions home is earned.
 - Note: findings above are from lab-host (a real project), NOT
   self-application to Deveno's own repo — evidence-eligible, held out only
   by the conservative choice, not by the exclusion rule.
+
 ## 2026-07-15 — PR-workflow proposal reviewed; suspected EHS second canon dissolved
 - Done: reviewed the proposal to use GitHub PRs as the container for
   standard-change proposals (PR = ephemeral discussion, repository =
@@ -223,3 +224,19 @@ Project decisions are recorded here until a decisions home is earned.
   method; filtering capacity shown, self-enforcement not shown.
 - Deferred: PR review and merge decision; process review after 3-5
   real proposal PRs (formalize only on repeated pain).
+
+## 2026-07-15 (3) — PR #2 merged; merge-fusion of two questions repaired
+- Done: PR #2 merged by the engineer — the PR-as-proposal-container
+  workflow is adopted for trial use (form review still due after 3-5
+  real PRs).
+- Found and fixed (merge artifact): the PR #2 conflict resolution fused
+  lab-host's session-log-placement question (its DVN-Q8; id taken by a
+  parallel branch) into DVN-Q9's text — two hypotheses in one entry.
+  Split: DVN-Q9 keeps invariant-kind only; the lab-host question is now
+  DVN-Q10 (the 2026-07-14 log entry's "new DVN-Q8" pointer refers to it).
+- Found (third id-collision incident: transfer package, proposal text,
+  now parallel branches): pre-assigned DVN-Q* ids collide whenever two
+  writers exist. PR #3 already uses "id: unassigned # assigned at
+  application time" — candidate rule for the proposal template.
+- Deferred: PR #3 review (transfer-artifact versioning; note it
+  branches from pre-repair state — its context will conflict).
