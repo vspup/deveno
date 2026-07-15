@@ -240,3 +240,18 @@ Project decisions are recorded here until a decisions home is earned.
   application time" — candidate rule for the proposal template.
 - Deferred: PR #3 review (transfer-artifact versioning; note it
   branches from pre-repair state — its context will conflict).
+
+## 2026-07-15 (4) — n95 checked: the EHS home never existed
+- Done: PR #3 rebased onto main (question applied as DVN-Q11, id
+  assigned at application time) and merged by the engineer; the
+  deferred ~/tools/ews check on n95 executed over SSH.
+- Found: ~/tools/ews does not exist on n95 under either account (volo,
+  uno); no OBSERVATIONS.md, no ews traces in shell history or lab-host.
+  The "owner to carry over" pointer from the mps2-hub 2026-07-01 log
+  was never executed — the intended home never materialized. Nothing
+  to mark superseded; DVN-C1 provenance corrected (intended, not
+  actual, home) with a cross-reference to DVN-Q11, which this dangling
+  two-week pointer illustrates.
+- Note: the feedback content itself was not lost — it reached this
+  register via the 2026-07-08 transfer application (DVN-Q6/Q7, DVN-C2).
+- Deferred: process review after 3-5 real proposal PRs (two merged).
