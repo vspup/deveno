@@ -304,6 +304,12 @@ questions:
 conflicts:
   - id: DVN-C1
     subject: rule-status-declaration
+    provenance: >-
+      EHS Draft 0.3-1 was the pre-Deveno working draft; it lived in
+      ~/tools/ews on machine n95, was never versioned in any repository,
+      and is not archived. Superseded by this repository (rename EHS ->
+      Deveno, 2026-07-02); the cited artifact is traceable only through
+      mps2-hub session-log records of the adoption phases.
     locations:
       - artifact: EHS Draft 0.3-1, section markers
         value: "[Core] = proven by practice, copied unchanged"
