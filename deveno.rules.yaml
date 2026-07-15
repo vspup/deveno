@@ -239,7 +239,12 @@ questions:
       Which rules apply to which repository profiles? This repository is
       not a Hub (no workspace/, no interfaces); three-entry-points does
       not apply here. The applies_to field is the current local answer;
-      whether the profile split generalizes is unconfirmed.
+      whether the profile split generalizes is unconfirmed. A third
+      profile surfaced 2026-07-14 (lab-host): a hybrid Hub that is a
+      knowledge Hub yet holds its own executable code — neither the
+      reference Hub (code in a separate source repo), nor a plain source
+      repo, nor standard-repository. Whether it earns its own profile or
+      is a Hub with a recorded divergence is open.
     status: unknown
 
   # DVN-Q2 removed 2026-07-08: its premise ("Raised by the MPS2 CAN
@@ -263,7 +268,13 @@ questions:
       deliberately deferred; wakes when a third hub exists and
       copy-drift produces real pain. Submodule was rejected for now:
       it would freeze a draft into a dependency and distribute a
-      standard whose normative status is not yet computed.
+      standard whose normative status is not yet computed. First real
+      datapoint 2026-07-14: lab-host adopted via submodule per adopt-hub
+      §1 — the only DVN-R0-clean option (verbatim copy would create a
+      second home of the normative text). This surfaces a tension:
+      adopt-hub prescribes submodule while this question records it as
+      rejected-for-now — the recipe ran ahead of the open question;
+      reconciliation pending.
     status: unknown
     
   - id: DVN-Q5
@@ -325,6 +336,14 @@ questions:
       automation. Explicit non-triggers: merely encountering the first
       invariant, preference for clearer classification, anticipated
       convenience. The existing fact form is tried first.
+      DVN-R6 fixes the session-log filename as 00-session-log.md. In a
+      navigational vault the 00- prefix reads as entry/index (00-home),
+      so operational 00- files (session-log, conflicts, duplicates)
+      compete visually with the single engineer entry. lab-host uses
+      _meta/session-log.md to keep 00- entry-only. Should R6 own the
+      location, or is placement a project convention (vault -> _meta/,
+      plain docs/ -> 00-, tiny repo -> root) with R6 owning only the
+      "append every session" obligation? Raised by lab-host 2026-07-14.
     status: unknown
 
 # Conflicts of the standard itself (DVN-R1). Resolved conflicts stay

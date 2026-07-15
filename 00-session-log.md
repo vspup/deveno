@@ -162,6 +162,37 @@ Project decisions are recorded here until a decisions home is earned.
   (mixed-status notes, canonical-name exception, linter hints) for
   Deveno.md.
 
+## 2026-07-14 — LabHost adopted Deveno v0.5 (first real second project)
+- Done: lab-host (AI-station control plane, vspup/lab-host) adopted the
+  standard at v0.5, pinned as the `deveno/` submodule per adopt-hub §1.
+  First genuine second engineering project (distinct from mps2), not a
+  candidate — reverse evidence flow now open (DVN-R5, adopt-hub §5).
+- Profile: lab-host is a *hybrid Hub* — a knowledge Hub that also holds
+  its own executable code (provision/, scripts/, firmware, web tools),
+  which the reference Hub keeps in a separate source repo. A new
+  repository profile beyond hub/standard-repository. Recorded, not fixed
+  (adopt-hub §4); folded into DVN-Q1.
+- Found (DVN-R3 reconciliation): lab-host had no README (missing visitor
+  entry) and two "start here" docs (CLAUDE.md + STATUS.md). Reconciled:
+  README added; STATUS.md kept as the live operational board (a referenced
+  artifact, not a fourth entry); 00-home thin. Genuine day-one pain but
+  held OUT of evidence for now (conservative) — accumulates through use
+  before any promotion.
+- Found (suspected, needs-home): machine facts (instrument commutation)
+  lived in prose (STATUS §4) and likely duplicate lab-bench udev/tool
+  configs. Extracted to 30-instruments.facts.yaml as the single home
+  (DVN-R0); lab-bench not cloned, cross-check deferred — suspected
+  CONFLICT, not confirmed.
+- Found (tension -> Q4): adopt-hub §1 prescribes submodule while DVN-Q4
+  records submodule "rejected for now". lab-host chose submodule (only
+  DVN-R0-clean option; verbatim copy = second home). First real datapoint
+  toward resolving Q4; noted in Q4.
+- Found (-> new DVN-Q8): DVN-R6 hardcodes filename 00-session-log.md; in a
+  navigational vault 00- reads as entry/index, so operational 00- files
+  compete with the single entry. lab-host uses _meta/session-log.md.
+- Note: findings above are from lab-host (a real project), NOT
+  self-application to Deveno's own repo — evidence-eligible, held out only
+  by the conservative choice, not by the exclusion rule.
 ## 2026-07-15 — PR-workflow proposal reviewed; suspected EHS second canon dissolved
 - Done: reviewed the proposal to use GitHub PRs as the container for
   standard-change proposals (PR = ephemeral discussion, repository =
