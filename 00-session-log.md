@@ -177,3 +177,18 @@ Project decisions are recorded here until a decisions home is earned.
   while this register's trace (DVN-Q6/Q7, DVN-C2) cites them.
 - Deferred: pilot PR for the proposal workflow; check ~/tools/ews on
   n95 (mark superseded, mine OBSERVATIONS.md for undelivered items).
+
+## 2026-07-15 (2) — Engineering Intent Management residue recorded; pilot PR branch
+- Done: the external proposal (reviewed 2026-07-15 in chat through
+  DVN-R5; not adopted, no rule changes) materialized on branch
+  proposal/engineering-intent-management as the pilot of the
+  PR-as-proposal-container workflow.
+- Recorded: DVN-Q8 (machine-readable task boundaries, with the causal
+  closing condition); DVN-Q9 (invariant fact kind — claimed candidate
+  held as needs-home per DVN-R0).
+- Found (self-application, limitation — not evidence): the DVN-R5
+  sequence filtered an architectural extension down to two questions,
+  but only under conscious invocation by participants who knew the
+  method; filtering capacity shown, self-enforcement not shown.
+- Deferred: PR review and merge decision; process review after 3-5
+  real proposal PRs (formalize only on repeated pain).
