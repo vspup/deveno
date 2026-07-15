@@ -193,3 +193,18 @@ Project decisions are recorded here until a decisions home is earned.
 - Note: findings above are from lab-host (a real project), NOT
   self-application to Deveno's own repo — evidence-eligible, held out only
   by the conservative choice, not by the exclusion rule.
+## 2026-07-15 — PR-workflow proposal reviewed; suspected EHS second canon dissolved
+- Done: reviewed the proposal to use GitHub PRs as the container for
+  standard-change proposals (PR = ephemeral discussion, repository =
+  the only long-term home) — consistent with DVN-R0/R2/R5; noted the
+  proposal pre-assigned DVN-Q6 (taken) — ids are assigned at
+  application time, the new question will be DVN-Q8.
+- Found (suspected CONFLICT, dissolved by evidence): "EHS draft lives
+  in mps2-hub" — false; mps2-hub references deveno @ v0.5 as the only
+  home of rules. The draft lived in ~/tools/ews on n95, unversioned;
+  provenance note added to DVN-C1.
+- Found (candidate question): hub<->standard transfer artifacts
+  (mps2-hub output/) are gitignored and exist on one machine only,
+  while this register's trace (DVN-Q6/Q7, DVN-C2) cites them.
+- Deferred: pilot PR for the proposal workflow; check ~/tools/ews on
+  n95 (mark superseded, mine OBSERVATIONS.md for undelivered items).
