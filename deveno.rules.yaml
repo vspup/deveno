@@ -353,6 +353,22 @@ questions:
       DVN-Q10 on 2026-07-15.
     status: unknown
 
+  - id: DVN-Q11 # assigned at application time (rebase onto main, 2026-07-15)
+    text: >-
+      Hub<->standard transfer artifacts (feedback notes, proposals)
+      live in the hub's gitignored output/ on a single machine, while
+      this register's trace cites them (DVN-Q6, DVN-Q7 and DVN-C2 are
+      traceable to mps2-hub output/ artifacts such as
+      ehs-feedback-mps2-2026-07-01.md). A register whose provenance
+      points at unversioned single-machine files loses its trace when
+      that machine dies. Should transfer artifacts be required to have
+      a long-term versioned home — e.g. the proposal PR branch itself,
+      once the PR workflow is adopted — and does the PR workflow
+      supersede file-based transfer entirely? Raised by mps2 recovery
+      2026-07-15, seeding the standard's own 2026-07-15 session-log
+      candidate through the proposed PR channel.
+    status: unknown
+
 # Conflicts of the standard itself (DVN-R1). Resolved conflicts stay
 # recorded: the resolution is part of the trace.
 
