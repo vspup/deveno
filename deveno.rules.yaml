@@ -311,6 +311,31 @@ questions:
 
   - id: DVN-Q8
     text: >-
+      Do AI-assisted tasks need machine-readable boundaries of allowed
+      and forbidden changes? Residue of an external proposal
+      (Engineering Intent Management, reviewed 2026-07-15 through
+      DVN-R5; the architectural layer was not adopted — its elements
+      reduced to existing mechanisms: constraints -> facts and hard
+      rules, provenance -> verified_by, forbidden operations ->
+      CLAUDE.md hard rules, change provenance -> git/PR/review). No
+      documented pain exists. Wakes on independent documented cases
+      where an agent crossed task boundaries specifically because
+      boundaries known to the engineer were not available to the agent
+      in machine-readable form; an agent merely making a mistake does
+      not count — the causal link must be shown.
+    status: unknown
+
+  - id: DVN-Q9
+    text: >-
+      Should a fact be able to declare itself an invariant (a kind
+      field in *.facts.yaml)? A claimed candidate from the same
+      2026-07-15 proposal review, held here as needs-home per DVN-R0
+      (no candidate register exists and none is created for one entry).
+      Trigger: a real system invariant that the existing fact form
+      cannot represent adequately for understanding, verification, or
+      automation. Explicit non-triggers: merely encountering the first
+      invariant, preference for clearer classification, anticipated
+      convenience. The existing fact form is tried first.
       DVN-R6 fixes the session-log filename as 00-session-log.md. In a
       navigational vault the 00- prefix reads as entry/index (00-home),
       so operational 00- files (session-log, conflicts, duplicates)
