@@ -255,3 +255,22 @@ Project decisions are recorded here until a decisions home is earned.
 - Note: the feedback content itself was not lost — it reached this
   register via the 2026-07-08 transfer application (DVN-Q6/Q7, DVN-C2).
 - Deferred: process review after 3-5 real proposal PRs (two merged).
+
+## 2026-08-01 — DVN-R9 drafted: the PR workflow formalized as a rule
+- Done: branch proposal/dvn-r9-evolution-regulation — DVN-R9
+  (evolution-via-pull-requests) drafted in the register with three
+  evidence entries (mps2 transfer artifacts / lab-host id fusion /
+  mri-magnet-model stalled R3 evidence candidate), motivating prose in
+  Deveno.md, and .github/PULL_REQUEST_TEMPLATE.md carrying the
+  five-section proposal form (Problem / Proposal / Affected homes /
+  Review / Decision; ids never pre-assigned).
+- Note: the standing deferral said "formalize after 3-5 real proposal
+  PRs" (two merged); this proposal is the third and argues the pain
+  already repeated (three id-collision incidents, DVN-Q11 trace loss).
+  Evidence eligibility (all three entries, notably whether the
+  lab-host fusion counts as hub-side pain) is the engineer's review
+  call — striking any entry just recomputes the status.
+- Deferred: decision on this PR; on merge — resolve or update DVN-Q11
+  (it anticipated "the proposal PR branch itself" as the versioned
+  transfer home); tag decision and consumer re-pins (mri-magnet-model
+  still pins v0.4 while v0.5 exists).

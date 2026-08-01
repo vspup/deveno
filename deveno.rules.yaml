@@ -231,6 +231,68 @@ rules:
           argument for linter enforcement.
         observed_on: 2026-07-02
 
+  - id: DVN-R9
+    title: evolution-via-pull-requests
+    normative_text: >-
+      Every change to the normative layer (rules, their evidence,
+      questions, conflicts) travels as a pull request against the
+      standard repository: one proposal — one PR, structured as
+      Problem (pain) / Proposal / Affected homes / Review / Decision.
+      Review checks the proposal against DVN-R0 (no second home is
+      created; overlaps with existing rules and questions are named)
+      and against DVN-R5 (ladder position stated; documented pain per
+      evidence entry pointing to a recorded artifact, or an explicit
+      basis for a hypothesis). Review may be prepared by AI; the merge
+      decision is always the engineer's (the DVN-R1 division). A merge
+      lands entries and evidence in their single homes and never
+      declares status — status stays computed (the DVN-C1 lesson).
+      Entity ids (DVN-R*/Q*/C*) are assigned at application time onto
+      main, never pre-assigned in a branch. A PR is not a home of
+      knowledge: after the decision the result lives in the register
+      (rules, questions, conflicts) or in the consuming hub (a local
+      rule), and 00-session-log.md keeps one line per PR — number,
+      decision, where the result now lives; rejected and deferred
+      proposals get the same line. Consumers pin tags: merges reach
+      hubs only through a new tag and a deliberate re-pin recorded in
+      the hub.
+    corollary: >-
+      Lightweight path: session-log entries and editorial fixes that
+      touch neither normative_text nor evidence/questions/conflicts
+      may be committed directly. DVN-R5's "reword any time" stands —
+      a wording PR needs no new pain, only review.
+    applies_to: [standard-repository]
+    evidence:
+      - project: mps2
+        phase: recovery
+        pain: >-
+          Hub->standard transfer artifacts lived in gitignored output/
+          on a single machine while the register's trace cited them
+          (DVN-Q6/Q7 and DVN-C2 trace to
+          ehs-feedback-mps2-2026-07-01.md); a registered carry-over
+          pointer (the EHS draft home on n95) turned out never
+          executed, and DVN-C1 provenance had to be repaired two weeks
+          later. Raised as DVN-Q11.
+        observed_on: 2026-07-15
+      - project: lab-host
+        phase: adoption
+        pain: >-
+          Its session-log-placement question travelled through a
+          parallel branch with a pre-assigned id; the PR #2 merge
+          fused it into DVN-Q9's text (two hypotheses in one entry),
+          requiring a repair commit and re-assignment as DVN-Q10 —
+          the third id-collision incident (transfer package, proposal
+          text, parallel branches).
+        observed_on: 2026-07-15
+      - project: mri-magnet-model
+        phase: operation
+        pain: >-
+          An evidence candidate for refining DVN-R3 wording was
+          recorded in the consumer hub
+          (mri-magnet-model-vault/01-project/decisions.md, 2026-07-23)
+          and never reached this register — without a defined channel,
+          reverse evidence flow stalls in consumer homes.
+        observed_on: 2026-08-01
+
 # Open questions of the standard itself (UNKNOWN, per DVN-R1):
 
 questions:
