@@ -274,3 +274,14 @@ Project decisions are recorded here until a decisions home is earned.
   (it anticipated "the proposal PR branch itself" as the versioned
   transfer home); tag decision and consumer re-pins (mri-magnet-model
   still pins v0.4 while v0.5 exists).
+
+## 2026-08-01 (2) — PR #4 merged: DVN-R9 in force; v0.6 tagged
+- Done: PR #4 merged by the engineer (7bd0d03) — DVN-R9
+  (evolution-via-pull-requests) now lives in the register; the
+  five-section form is active via .github/PULL_REQUEST_TEMPLATE.md.
+  This entry itself uses the R9 lightweight path (direct log commit).
+  Tag v0.6 set on main.
+- Deferred: DVN-Q11 resolve/update — the rule answers its second half
+  ("the proposal PR branch as the versioned transfer home"), closing
+  it is the engineer's call; consumer re-pins (lab-host at v0.5,
+  mri-magnet-model at v0.4, mps2-hub workspace detached pre-v0.6).
